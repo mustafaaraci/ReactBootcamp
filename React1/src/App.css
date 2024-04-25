@@ -1,0 +1,10 @@
+.container{
+    max-width: 1366px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card{
+    width: 50vh;
+    height: 50vh;
+}

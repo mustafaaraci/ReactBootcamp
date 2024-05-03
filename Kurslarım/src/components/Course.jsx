@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {Button} from 'react-bootstrap'
 import { Navigate } from 'react-router-dom'
+import DetailPage from '../pages/DetailPage';
+import { courses } from '../Data';
 
 
 

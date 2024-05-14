@@ -1,42 +1,58 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { FaBook } from 'react-icons/fa';
-
-
-
-
-
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { FaBook } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "../css/NavbarHead.css";
 function NavbarHead() {
   return (
     <>
       <Navbar expand="lg" className="navbarhead fixed-top">
-      <Container>
-        <Navbar.Brand href="/anasayfa" className='headname'><FaBook className='icon'/>Kurslarım</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-           <Nav.Link href="/anasayfa">Anasayfa</Nav.Link>
-              <Nav.Link href="/egitim">Eğitimlerim</Nav.Link>
-            <NavDropdown title="Kurslar" id="basic-nav-dropdown">
-              <NavDropdown.Item href="kurslar/csharp">Csharp(C#) Eğitimi</NavDropdown.Item>
-              <NavDropdown.Item href="kurslar/javascript"> JavaScript Eğitimi</NavDropdown.Item>
-              <NavDropdown.Item href="kurslar/react">React Eğitimi</NavDropdown.Item>
-              <NavDropdown.Item href="kurslar/sql">SQL Eğitimi</NavDropdown.Item>
-              <NavDropdown.Item href="kurslar/asp">ASP.NET CORE MVC Eğitimi</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="kurslar/indirimli">
-                İndirimli Kurslar
-              </NavDropdown.Item>
-            </NavDropdown>
-           </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <Container className="container">
+          <Navbar.Brand className="headname">
+            <Link to="/">
+              <FaBook className="icon" />
+              Kurslarım
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link>
+                <Link to="/anasayfa">Anasayfa</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/egitim">Eğitimlerim</Link>
+              </Nav.Link>
+              <NavDropdown title="Kurslar" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link to="/kurslar/csharp">Csharp(C#) Eğitimi</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="kurslar/javascript">JavaScript Eğitimi</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="kurslar/react">React Eğitimi</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="kurslar/sql">SQL Eğitimi</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="kurslar/asp">ASP.NET CORE MVC Eğitimi</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                  <Link to="kurslar/indirimli">İndirimli Kurslar</Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
-  )
+  );
 }
 
-export default NavbarHead
+export default NavbarHead;

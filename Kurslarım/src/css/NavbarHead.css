@@ -1,8 +1,8 @@
-
-.navbarhead{
-  background-color: rgb(88, 143, 190);  
+.navbarhead {
+  background-color: rgb(204, 214, 223);
 }
 
-.icon{
-    font-size: xx-large;
+.icon {
+  font-size: xx-large;
+  color: rgb(23, 139, 139);
 }
